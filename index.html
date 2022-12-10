@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio Mustofa Aldin</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
     <style>
       @font-face /*perintah untuk memanggil font eksternal*/ {
         font-family: "SF-UI-Display-Regular";
@@ -15,7 +16,7 @@
   </head>
   <body>
     <div class="container-fluid m-0 p-0 overflow-hidden" style="align-center">
-      <nav class="navbar navbar-expand-lg bg-white" style="font-size: 20px">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top" style="font-size: 20px">
         <div class="container-fluid" style="font-family: SF-UI-Display-Regular">
           <a class="navbar-brand" href="#" style="font-size: 25px">Mustofa Aldin</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,36 +24,36 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto" style="font-family: SF-UI-Display-Regular">
-              <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-              <a class="nav-link" href="#">Tentang</a>
-              <a class="nav-link" href="#">Galeri</a>
-              <a class="nav-link" href="#">Kontak</a>
+              <a class="nav-link active" aria-current="page" href="#home">Beranda</a>
+              <a class="nav-link" href="#tentang">Tentang</a>
+              <a class="nav-link" href="#galeri">Galeri</a>
+              <a class="nav-link" href="#kontak">Kontak</a>
             </div>
           </div>
         </div>
       </nav>
 
-      <div class="row text-left">
-        <div class="container-fluid row justify-content-around" style="background-color: #faf8ff; padding-top: 70px; padding-bottom: 70px">
+      <div class="row text-left" id="home">
+        <div class="container-fluid row justify-content-around" style="background-color: #faf8ff; padding-top: 150px; padding-bottom: 50px">
           <div class="col-lg-6 col-md-6 col-ms-12 ps-5" style="font-family: SF-UI-Display-Regular; text-align: center">
             <h2 class="my-4">Welcome to My Website</h2>
             <h1 class="my-4"><b>Mustofa Aldin</b></h1>
             <h3 class="my-4">Software Engineering</h3>
             <div class="row justify-content-around mt-5">
               <div class="col-lg-4 col-md-4 col-ms-12">
-                <button type="button" class="btn btn-primary btn-lg py-2 mb-4">GALERI</button>
+                <a class="btn btn-primary btn-lg py-2 mb-4" href="#galeri" role="button">GALERI</a>
               </div>
               <div class="col-lg-4 col-md-4 col-ms-12">
-                <button type="button" class="btn btn-outline-primary btn-lg py-2 mb-4">EMAIL</button>
+                <a class="btn btn-outline-primary btn-lg py-2 mb-4" href="#kontak" role="button">KONTAK</a>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-ms-12" data-aos="fade-left" data-aos-duration="1000">
-            <img class="mx-auto d-block" src="img/atas.png" style="width: 450px" alt="" />
+            <img class="mx-auto d-block" src="img/atas.png" style="width: 400px" alt="" />
           </div>
         </div>
 
-        <div class="row" style="background-color: #ebebf5; padding-top: 50px; margin-bottom: 50px">
+        <div class="row" style="background-color: #ebebf5; padding-top: 120px; padding-bottom: 120px; margin-bottom: 50px" id="tentang">
           <div class="col-lg-6 col-md-6 col-ms-12" style="padding-top: 50px; padding-bottom: 50px" data-aos="fade-right" data-aos-duration="1000">
             <img class="mx-auto d-block" src="img/img2.png" style="width: 350px" alt="" />
           </div>
@@ -62,8 +63,8 @@
           </div>
         </div>
 
-        <h3 class="mt-5 text-center" style="font-family: SF-UI-Display-Regular">Galeri</h3>
-        <div class="row p-5 justify-content-center" style="font-family: SF-UI-Display-Regular">
+        <h3 class="mt-5 text-center" style="font-family: SF-UI-Display-Regular; padding-top: 5rem" id="galeri">Galeri</h3>
+        <div class="row p-5 justify-content-center mx-auto" style="font-family: SF-UI-Display-Regular">
           <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
             <div class="card" data-aos="flip-up" data-aos-duration="500">
               <img src="img/Hari Kelulusan.jpg" class="card-img-top" alt="..." />
@@ -120,8 +121,8 @@
           </div>
         </div>
 
-        <div class="row justify-content-center mx-auto">
-          <div class="col-lg-6 col-md-8 col-ms-8 shadow p-3 mb-5 bg-body rounded mx-5" style="font-family: SF-UI-Display-Regular">
+        <div class="row justify-content-center mx-auto" id="kontak">
+          <div class="col-lg-6 col-md-8 col-ms-4 shadow p-3 mb-5 bg-body rounded mx-5" style="font-family: SF-UI-Display-Regular">
             <h3 class="text-center">Berikan Kritik atau Saran</h3>
             <div class="mb-3">
               <label for="exampleFormControlName" class="form-label">Nama</label>
@@ -136,6 +137,9 @@
             </div>
           </div>
         </div>
+        <footer class="bg-primary text-white text-center p-3 text-middle" style="font-family: SF-UI-Display-Regular">
+          <p>Created by <i class="bi bi-heart-fill text-danger"></i> <a href="https://www.instagram.com/mustofaaldin" style="text-decoration: none" class="text-white fw-bold">Mustofa Aldin</a></p>
+        </footer>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
