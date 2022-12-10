@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio Mustofa Aldin</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
       @font-face /*perintah untuk memanggil font eksternal*/ {
         font-family: "SF-UI-Display-Regular";
@@ -39,70 +40,88 @@
             <h3 class="my-4">Software Engineering</h3>
             <div class="row justify-content-around mt-5">
               <div class="col-lg-4 col-md-4 col-ms-12">
-                <button type="button" class="btn btn-success btn-lg py-2 mb-4">GALERI</button>
+                <button type="button" class="btn btn-primary btn-lg py-2 mb-4">GALERI</button>
               </div>
               <div class="col-lg-4 col-md-4 col-ms-12">
                 <button type="button" class="btn btn-outline-primary btn-lg py-2 mb-4">EMAIL</button>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-ms-12">
-            <img class="mx-auto d-block" src="atas.png" style="width: 450px" alt="" />
+          <div class="col-lg-6 col-md-6 col-ms-12" data-aos="fade-left" data-aos-duration="1000">
+            <img class="mx-auto d-block" src="img/atas.png" style="width: 450px" alt="" />
           </div>
         </div>
 
         <div class="row" style="background-color: #ebebf5; padding-top: 50px; margin-bottom: 50px">
-          <div class="col-lg-6 col-md-6 col-ms-12" style="padding-top: 50px; padding-bottom: 50px">
-            <img class="mx-auto d-block" src="img2.png" style="width: 350px" alt="" />
+          <div class="col-lg-6 col-md-6 col-ms-12" style="padding-top: 50px; padding-bottom: 50px" data-aos="fade-right" data-aos-duration="1000">
+            <img class="mx-auto d-block" src="img/img2.png" style="width: 350px" alt="" />
           </div>
-          <div class="col-lg-6 col-md-6 col-ms-12 col-ms-12 p-5" style="padding-top: 50px; padding-bottom: 50px; font-family: SF-UI-Display-Regular">
+          <div class="col-lg-6 col-md-6 col-ms-12 col-ms-12 p-5" style="padding-top: 50px; padding-bottom: 50px; font-family: SF-UI-Display-Regular" data-aos="fade-left" data-aos-duration="1000">
             <h1 class="my-4" style="font-size: 55px"><b>Introducing</b></h1>
             <span class="" style="font-size: 30px"> Hello my name is Mustofa Aldin, have a hobby of making a website and i live in Indramayu </span>
           </div>
         </div>
 
         <h3 class="mt-5 text-center" style="font-family: SF-UI-Display-Regular">Galeri</h3>
-        <div class="row p-5" style="font-family: SF-UI-Display-Regular">
+        <div class="row p-5 justify-content-center" style="font-family: SF-UI-Display-Regular">
           <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
-            <div class="card">
-              <img src="img.jpg" class="card-img-top" alt="..." />
+            <div class="card" data-aos="flip-up" data-aos-duration="500">
+              <img src="img/Hari Kelulusan.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Pemandangan 1</h5>
-                <p class="card-text">Pemandangan yang menanakjubkan di Bulan Januari - Musim Semi.</p>
+                <h5 class="card-title">RPL 2 (2021)</h5>
+                <p class="card-text">Berfoto di Hari Kelulusan siswa RPL 2</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
-            <div class="card">
-              <img src="imga.jpg" class="card-img-top" alt="..." />
+            <div class="card" data-aos="flip-up" data-aos-duration="500" data-aos-delay="100">
+              <img src="img/Badboy RPL 2.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Pemandangan 2</h5>
-                <p class="card-text">Pemandangan yang menanakjubkan di Bulan April - Musim Panas.</p>
+                <h5 class="card-title">Bad Boy RPL 2</h5>
+                <p class="card-text">Pergi ke Sekolah untuk Belajar Coding Bersama (06-10-2020)</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
-            <div class="card">
-              <img src="img.jpg" class="card-img-top" alt="..." />
+            <div class="card" data-aos="flip-up" data-aos-duration="500" data-aos-delay="200">
+              <img src="img/Laki - laki RPL 2.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Pemandangan 3</h5>
-                <p class="card-text">Pemandangan yang menanakjubkan di Bulan Juli - Musim Gugur.</p>
+                <h5 class="card-title">Teman teman di RPL 2</h5>
+                <p class="card-text">Kenang-kenangan siswa Laki-laki di Hari Kelulusan</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
-            <div class="card">
-              <img src="imga.jpg" class="card-img-top" alt="..." />
+            <div class="card" data-aos="flip-up" data-aos-duration="500" data-aos-delay="300">
+              <img src="img/Event Sekolah.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Pemandangan 4</h5>
-                <p class="card-text">Pemandangan yang menanakjubkan di Bulan Oktober - Musim Dingin.</p>
+                <h5 class="card-title">Pawidya 2022</h5>
+                <p class="card-text">Suasana Acara Pawidya angkatan 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
+            <div class="card" data-aos="flip-up" data-aos-duration="500" data-aos-delay="400">
+              <img src="img/Acara Sekolah.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Teman teman</h5>
+                <p class="card-text">Foto Bersama Teman-teman di hari Pawidya dengan Angkatan 2021</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-ms-12 mb-4">
+            <div class="card" data-aos="flip-up" data-aos-duration="500" data-aos-delay="500">
+              <img src="img/Reuni SD.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Bukber SD</h5>
+                <p class="card-text">Reuni sekaligus Bukber bersama Teman SD (H-1 Lebaran)</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8 col-ms-10 shadow p-3 mb-5 bg-body rounded mx-5" style="font-family: SF-UI-Display-Regular">
+        <div class="row justify-content-center mx-auto">
+          <div class="col-lg-6 col-md-8 col-ms-8 shadow p-3 mb-5 bg-body rounded mx-5" style="font-family: SF-UI-Display-Regular">
             <h3 class="text-center">Berikan Kritik atau Saran</h3>
             <div class="mb-3">
               <label for="exampleFormControlName" class="form-label">Nama</label>
@@ -124,6 +143,10 @@
       function mengirim() {
         alert("Pesan Anda Berhasil Di Kirim");
       }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
