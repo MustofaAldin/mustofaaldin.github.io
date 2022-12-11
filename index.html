@@ -120,21 +120,33 @@
             </div>
           </div>
         </div>
+        <!--Pesan Asli-->
 
         <div class="row justify-content-center mx-auto" id="kontak">
-          <div class="col-lg-6 col-md-8 col-ms-4 shadow p-3 mb-5 bg-body rounded mx-5" style="font-family: SF-UI-Display-Regular">
-            <h3 class="text-center">Berikan Kritik atau Saran</h3>
-            <div class="mb-3">
-              <label for="exampleFormControlName" class="form-label">Nama</label>
-              <input type="email" class="form-control" id="exampleFormControlName" placeholder="Masukkan Nama" />
+          <div class="col-md-6 shadow p-3 mb-5 bg-body rounded mx-5" style="font-family: SF-UI-Display-Regular">
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih!</strong> Pesan Anda sudah kami terima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <div class="mb-3">
-              <label for="exampleFormControlPesan" class="form-label">Pesan</label>
-              <textarea class="form-control" id="exampleFormControlPesan" placeholder="Masukkan Pesan" rows="3"></textarea>
-            </div>
-            <div class="d-grid gap-2 text-center">
-              <button type="submit" class="btn btn-primary" onclick="mengirim()">Kirim</button>
-            </div>
+            <h3 class="text-center" style="padding-bottom: 10px">Berikan Kritik atau Saran</h3>
+            <form name="mustofa-kontak-form" autocomplete="off">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Masukkan Nama" name="nama" required />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="4" placeholder="Masukkan Pesan" name="pesan" required></textarea>
+              </div>
+              <div class="d-grid gap-2 text-center">
+                <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              </div>
+
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Mengirim Pesan...
+              </button>
+            </form>
           </div>
         </div>
         <footer class="bg-primary text-white text-center p-3 text-middle" style="font-family: SF-UI-Display-Regular">
@@ -151,6 +163,33 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyRqFnOoG4BOB99O7GGbcrNTqAr_cna4wbFTWx05hjaRBefT_o-8-4BqAroktBz8H_W/exec";
+      const form = document.forms["mustofa-kontak-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        //ketika tombol submit diklik
+        //tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            //tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            //tampilkan alert
+            myAlert.classList.toggle("d-none");
+            //reset formnya
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
