@@ -1,0 +1,101 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(to right, #68FEC7, #7AF1FE);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Section Links */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.link-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #777;
+}
+/* Update untuk link-btn agar ikon ditampilkan dengan baik */
+.link-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Ukuran ikon */
+.link-btn i {
+    font-size: 1.4rem;
+}
+
+/* Efek hover */
+.link-btn:hover {
+    background-color: #45a049;
+}
