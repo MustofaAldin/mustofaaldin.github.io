@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mustofa Aldin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          colors: {
+            primary: '#2563eb',
+            secondary: '#f3f4f6'
+          },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 2s ease-out;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-primary">Mustofa Aldin</a>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-primary focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent md:shadow-none shadow-md px-4 py-2 text-left">
+        <li><a href="#" class="block px-4 py-2 md:p-0 text-gray-600 hover:text-primary transition">Beranda</a></li>
+        <li><a href="#about" class="block px-4 py-2 md:p-0 text-gray-600 hover:text-primary transition">Tentang</a></li>
+        <li><a href="#gallery" class="block px-4 py-2 md:p-0 text-gray-600 hover:text-primary transition">Galeri</a></li>
+        <li><a href="#contact" class="block px-4 py-2 md:p-0 text-gray-600 hover:text-primary transition">Kontak</a></li>
+        <li><a href="https://mustofaaldin.github.io/linktree.html" class="block px-4 py-2 md:p-0 text-gray-600 hover:text-primary transition">Linktree</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('img/my.jpg');">
+  <div class="absolute inset-0 bg-black opacity-20"></div> <!-- Overlay untuk gelapkan gambar sedikit -->
+  <div class="relative z-10 flex flex-col justify-center items-center w-full h-full text-center text-white px-4">
+    <h1 class="text-5xl font-extrabold leading-tight mb-4">Halo, saya Mustofa Aldin</h1>
+    <p class="text-xl font-light mb-6">Web Developer</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="scroll-mt-16 py-20 bg-secondary">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">Tentang Saya</h2>
+    <p class="text-lg leading-relaxed text-gray-600">Saya seorang web developer dengan fokus pada pembuatan website edukatif dan bisnis. Saya juga aktif membagikan konten edukasi di TikTok.</p>
+  </div>
+</section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="scroll-mt-16 py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Galeri</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="fade-up transition-all duration-700 delay-[0ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+          <img src="img/hari-kelulusan.jpg" style="padding-bottom: 0.6em;">
+          <p class="text-gray-600">RPL 2 (2021)</p>
+        </div>
+        <div class="fade-up transition-all duration-700 delay-[200ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <img src="img/badboy-rpl-2.jpg" style="padding-bottom: 0.6em;">
+          <p class="text-gray-600">Bad Boy RPL 2</p>
+        </div>
+        <div class="fade-up transition-all duration-700 delay-[400ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <img src="img/laki-laki-rpl-2.jpg" style="padding-bottom: 0.6em;">
+          <p class="text-gray-600">Teman teman di RPL 2</p>
+        </div>
+        <div class="fade-up transition-all duration-700 delay-[600ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <img src="img/event-sekolah.jpg" style="padding-bottom: 0.6em;">
+          <p class="text-gray-600">Pawidya 2022</p>
+        </div>
+        <div class="fade-up transition-all duration-700 delay-[800ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <img src="img/acara-sekolah.jpg" style="padding-bottom: 0.6em;">
+          <p class="text-gray-600">Teman teman</p>
+        </div>
+        <div class="fade-up transition-all duration-700 delay-[1000ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+            <img src="img/reuni-sd.jpg" style="padding-bottom: 0.6em;">
+          <p class="text-gray-600">Bukber SD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="scroll-mt-16 py-20 bg-secondary">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Kontak Saya</h2>
+      
+      <!--alert-->
+      <div id="alert" class="my-alert hidden bg-green-100 text-green-800 p-3 rounded mt-4 text-center">
+        <span>Pesan Anda sudah Terkirim.</span>
+        <button onclick="document.getElementById('alert').remove()">
+          &times;
+        </button>
+      </div>
+      
+      <form id="contact-form" class="space-y-6" name="contact-form">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+          <input name="nama" type="text" id="name" required class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input name="email" type="email" id="email" required class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+          <textarea name="pesan" id="message" rows="5" required class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+        </div>
+        <div class="flex items-center justify-center text-center">
+          <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition btn-kirim ">Kirim</button>
+          
+          <button class="flex justify-center items-center gap-2 px-4 py-2 bg-blue-200 text-white rounded-lg btn-loading hidden" disabled>
+            <svg class="w-5 h-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+            </svg>
+            Loading...
+          </button>
+          
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center border-t text-sm text-gray-500">
+    <p>&copy;2025 Mustofa Aldin.</p>
+  </footer>
+
+  
+    <script>
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            }
+          });
+        });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function () {
+        document.getElementById('nav-menu').classList.add('hidden');
+      });
+    });
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby0hZPUCVzkd1waSvDwfWX6IxF8C3gTg9QoDFJD0fxfOL8MMYEwmkWLbO6mLmQ_X-Ht/exec'
+        const form = document.forms['contact-form'];
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.my-alert');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            //ketika tombol submit di klik
+            //tampilkan tombol loading, hilangkan tombol kirim
+            btnLoading.classList.remove('hidden');
+            btnKirim.classList.add('hidden');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    //tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.add('hidden');
+                    btnKirim.classList.remove('hidden');
+                    //tampilkan alert
+                    myAlert.classList.remove('hidden');
+                    //resset form
+                    form.reset();
+                    // Sembunyikan alert otomatis setelah 3 detik
+                    setTimeout(() => {
+                    myAlert.classList.add('hidden');
+                    }, 3000);
+                    // console.log('Success!', response);
+                })
+                .catch(error => console.error('Error!', error.message))
+  });
+  </script>
+</body>
+</html>
