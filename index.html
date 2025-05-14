@@ -16,6 +16,20 @@
             primary: '#2563eb',
             secondary: '#f3f4f6'
           },
+          keyframes: {
+            slideInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(50px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            }
+          },
+          animation: {
+            slideInLeft: 'slideInLeft 2s ease-out forwards',
+            slideInRight: 'slideInRight 2s ease-out forwards',
+          }
         }
       }
     }
@@ -40,9 +54,9 @@
 </head>
 <body class="font-sans text-gray-800 bg-white">
   <!-- Navbar -->
-  <nav class="bg-white shadow sticky top-0 z-50">
+  <nav class="bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-primary">Mustofa Aldin</a>
+      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Mustofa Aldin</a>
       <div class="md:hidden">
         <button id="menu-toggle" class="text-primary focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -63,45 +77,60 @@
 <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('img/my.jpg');">
   <div class="absolute inset-0 bg-black opacity-20"></div> <!-- Overlay untuk gelapkan gambar sedikit -->
   <div class="relative z-10 flex flex-col justify-center items-center w-full h-full text-center text-white px-4">
-    <h1 class="text-5xl font-extrabold leading-tight mb-4">Halo, saya Mustofa Aldin</h1>
-    <p class="text-xl font-light mb-6">Web Developer</p>
+    <h1 class="text-5xl font-extrabold leading-tight mb-4 bg-gradient-to-r from-lime-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent">Halo, saya Mustofa Aldin</h1>
+    <p class="text-xl bg-gradient-to-r from-sky-300 via-cyan-300 to-lime-400 bg-clip-text text-transparent mb-6">Web Developer</p>
   </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="scroll-mt-16 py-20 bg-secondary">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">Tentang Saya</h2>
-    <p class="text-lg leading-relaxed text-gray-600">Saya seorang web developer dengan fokus pada pembuatan website portofolio.</p>
-  </div>
-</section>
+<!-- new Tentang Saya -->
+<div id="about" class="scroll-mt-19 py-20 bg-gradient-to-br from-yellow-100 via-blue-100 to-white min-h-screen flex items-center justify-center">
+<div class="w-full max-w-7xl flex flex-col md:flex-row items-center overflow-hidden px-4 md:px-8">
+    
+    <!-- Gambar -->
+    <div class="w-full md:w-1/2 animate-slideInLeft mb-6 md:mb-0 md:mr-8">
+      <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg">
+        <img src="img/my.jpg" alt="Foto Saya" class="object-cover w-full h-full">
+      </div>
+    </div>
 
+    <!-- Teks Penjelasan -->
+    <div class="w-full md:w-1/2 animate-slideInRight">
+      <h1 class="text-4xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-6">
+        Tentang Saya
+      </h1>
+      <p class="text-lg text-gray-800 leading-relaxed">
+        Saya adalah seorang pengembang web dan kreator digital yang antusias mengeksplorasi ide-ide baru. Dengan pengalaman dalam desain UI/UX serta pengembangan front-end, saya berkomitmen untuk menciptakan pengalaman digital yang estetis dan fungsional.  
+      </p>
+    </div>
+
+  </div>
+</div>
   <!-- Gallery Section -->
-  <section id="gallery" class="scroll-mt-16 py-20 bg-white">
+  <section id="gallery" class="scroll-mt-16 py-20 bg-gradient-to-tr from-gray-100 via-blue-100 to-yellow-50">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Galeri</h2>
+      <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-br from-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Galeri</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="fade-up transition-all duration-700 delay-[0ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div class="fade-up transition-all duration-700 delay-[0ms] bg-gradient-to-b from-green-100 via-blue-200 to-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
           <img src="img/hari-kelulusan.jpg" style="padding-bottom: 0.6em;">
           <p class="text-gray-600">RPL 2 (2021)</p>
         </div>
-        <div class="fade-up transition-all duration-700 delay-[200ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div class="fade-up transition-all duration-700 delay-[200ms] bg-gradient-to-b from-green-100 via-blue-200 to-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
             <img src="img/badboy-rpl-2.jpg" style="padding-bottom: 0.6em;">
           <p class="text-gray-600">Bad Boy RPL 2</p>
         </div>
-        <div class="fade-up transition-all duration-700 delay-[400ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div class="fade-up transition-all duration-700 delay-[400ms] bg-gradient-to-b from-green-100 via-blue-200 to-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
             <img src="img/laki-laki-rpl-2.jpg" style="padding-bottom: 0.6em;">
           <p class="text-gray-600">Teman teman di RPL 2</p>
         </div>
-        <div class="fade-up transition-all duration-700 delay-[600ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div class="fade-up transition-all duration-700 delay-[600ms] bg-gradient-to-b from-green-100 via-blue-200 to-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
             <img src="img/event-sekolah.jpg" style="padding-bottom: 0.6em;">
           <p class="text-gray-600">Pawidya 2022</p>
         </div>
-        <div class="fade-up transition-all duration-700 delay-[800ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div class="fade-up transition-all duration-700 delay-[800ms] bg-gradient-to-b from-green-100 via-blue-200 to-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
             <img src="img/acara-sekolah.jpg" style="padding-bottom: 0.6em;">
           <p class="text-gray-600">Teman teman</p>
         </div>
-        <div class="fade-up transition-all duration-700 delay-[1000ms] bg-secondary p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
+        <div class="fade-up transition-all duration-700 delay-[1000ms] bg-gradient-to-b from-green-100 via-blue-200 to-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition text-center">
             <img src="img/reuni-sd.jpg" style="padding-bottom: 0.6em;">
           <p class="text-gray-600">Bukber SD</p>
         </div>
@@ -110,9 +139,9 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="scroll-mt-16 py-20 bg-secondary">
+  <section id="contact" class="scroll-mt-16 py-20 bg-gradient-to-bl from-green-100 via-blue-200 to-purple-50">
     <div class="max-w-xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Kontak Saya</h2>
+      <h2 class="text-3xl font-bold text-center mb-8 bg-gradient-to-br from-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Kontak Saya</h2>
       
       <!--alert-->
       <div id="alert" class="my-alert hidden bg-green-100 text-green-800 p-3 rounded mt-4 text-center">
@@ -124,19 +153,20 @@
       
       <form id="contact-form" class="space-y-6" name="contact-form">
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+          <label for="name" class="block text-sm font-medium text-gray-700">Nama :</label>
           <input name="nama" type="text" id="name" required class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary">
         </div>
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email :</label>
           <input name="email" type="email" id="email" required class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary">
         </div>
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+          <label for="message" class="block text-sm font-medium text-gray-700">Pesan :</label>
           <textarea name="pesan" id="message" rows="5" required class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
         </div>
+
         <div class="flex items-center justify-center text-center">
-          <button type="submit" class="bg-primary text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition btn-kirim ">Kirim</button>
+          <button type="submit" class="text-white px-4 py-2 rounded-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 hover:brightness-110  transition btn-kirim ">Kirim</button>
           
           <button class="flex justify-center items-center gap-2 px-4 py-2 bg-blue-200 text-white rounded-lg btn-loading hidden" disabled>
             <svg class="w-5 h-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -145,15 +175,15 @@
             </svg>
             Loading...
           </button>
-          
+
         </div>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white py-6 text-center border-t text-sm text-gray-500">
-    <p>&copy;2025 Mustofa Aldin.</p>
+  <footer class="bg-gradient-to-r from-green-300 via-red-100 to-blue-300 py-6 text-center border-t text-sm text-gray-500">
+    <p class="text-md bg-gradient-to-br from-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">&copy;2025 Mustofa Aldin.</p>
   </footer>
 
   
